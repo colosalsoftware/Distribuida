@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3Q26H9G81L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3Q26H9G81L');
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Inicio de Sesión</title>
@@ -28,6 +37,7 @@
                   <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
                 </form>
                 <!-- Botón de registro con Facebook -->
+                <a href="{% url 'register' %}">¿Aun no tienes una cuenta?</a>
           <div class="mt-4">
             <a href="https://www.facebook.com/v13.0/dialog/oauth?client_id=6865380426862829&redirect_uri={{ redirect_uri }}&scope=email" class="btn btn-primary btn-block">
               Iniciar sesión con Facebook

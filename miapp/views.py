@@ -12,12 +12,11 @@ def login_view(request):
         # Realizar la verificación del usuario en tu propia lógica
         if custom_authentication(email, password):
             # Aquí puedes establecer una sesión o token personalizado para el usuario
-            return redirect('home')
+            return render(request, 'miapp/home.html')
 
     return render(request, 'miapp/login.html')
 
-def home_view(request):
-    return render(request, 'miapp/home.html')
+    
 # views.py
 
 def custom_authentication(email, password):
